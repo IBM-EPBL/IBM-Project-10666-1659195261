@@ -1,0 +1,87 @@
+<html>
+<div align="center" class="log">
+<head>
+<meta charset="UTF-8">
+<center>
+<table>
+<tr>
+<td><h1><br>Prediction of Flight Delay<br><br></h1></td>
+</tr>
+</table>
+</center>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+.log{
+height: 753px; width: 1536px;
+background-image: url("./static/image/249456.jpg");
+background-size: cover;
+O Search
+}
+body {
+margin: 0%;
+padding: 0%;
+overflow: hidden;
+</style>
+</head>
+<body>
+<form action="{{ url_for('predict') }}" method="POST"> <center>
+<table>
+<tr>
+<td>Enter the flight number:</td>        
+<td><input type="text" name="fname" required><br></td>        
+</tr>
+<tr>        
+<td>Month:</td>
+<td><input type="number" name="month" required><br></td>        
+</tr>        
+<tr>        
+<td>Day of Month:</td>
+<td><input type="number" name="daymonth" required><br></td>        
+</tr>        
+<tr>        
+<td>Day of Week:</td>
+<td><input type="number" name="dayweek" required><br></td>        
+</tr>
+<tr>        
+<td>Origin:</td>        
+<td><select name="origin" required> 
+<option value="alt">ATL</option>
+<option value="dtw">DTW</option>
+<option value="sea">SEA</option>
+<option value="msp">MSP</option>
+<option value="jfk">JFK</option>
+</select></td>
+</tr>
+<tr>
+<td>Destination:</td>
+<td><select name="destination" required> <option value="alt">ATL</option>
+<option value="dtw">DTW</option>
+<option value="sea">SEA</option> <option value="msp">MSP</option>
+<option value="jfk">JFK</option>
+</select></td>
+</tr>
+<tr>
+<td>Scheduled Arrival Time:</td>
+<td><input type="number" name="sarrivaltime" required><br></tc
+</tr>
+<tr>
+<td>Scheduled Arrival Time:</td>    
+<td><input type="number" name="sarrivaltime" required><br></td>    
+</tr>    
+<tr>    
+<td>Scheduled Departure Time:</td>    
+<td><input type="number" name="sdeparttime" required><br></td>    
+</tr>    
+<tr>    
+<td>Actual Departure Time:</td>    
+<td><input type="number" name="adeparttime"    
+        required><br></td>
+</tr>    
+<tr>    
+<td><br><input type="submit" class="btn" value="SUBMIT"></br>    
+</tr>    
+</table>    
+</center>    
+</form> <center><h1>{{predict}}</h1></center>   
+</body>
+</div> </html>
